@@ -1,11 +1,7 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
-
-.slick-slide div{
-	height: 100%;
-}
 .slick-dots{
 	bottom: 85px !important;
+  z-index: 2;
 	li.slick-active button:before{
 		color: #fff !important;
 	}
@@ -72,135 +68,142 @@ h4.section_title-top{
 .section_text-top{
 	margin-bottom: 70px;
 }
-.kv{
-	&__slider{
-		position: relative;
-		height: 654px;
-		-webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-		clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-	}
-	&__wrap{
-		height: 100%;
-		position: relative;
-	}
-	.slide-image{
-		height: 100%;
-		position: relative;
-		height: 730px;
-		position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 50;
-    width: 100%;
-    height: 730px;
-    color: #fff;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-		&:after{
-			z-index: 0;
-			content: "";
-			display: block;
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			border: 0px;
-			top: 0;
-			left: 0;
-		}
-	}
-	.owl-stage{
-		height: 100%;
-	}
-	.kv_text-wrap{
-		position: absolute;
-    top: 200px;
-    right: 0;
-    left: 0;
-    z-index: 50;
-    width: 850px;
-    height: 100px;
-    margin: auto;
-    text-align: center;
-		&.left-upper{
-			left: 100px;
-	    right: auto;
-	    top: 50px;
-	    bottom: auto;
-		}
-		&.right-upper{
-			left: auto;
-	    right: 100px;
-	    top: 50px;
-	    bottom: auto;
-			.kv_title,.kv_text{text-align: right;}
-		}
-		&.left-lower{
-			left: 180px;
-	    right: auto;
-	    top: auto;
-	    bottom: 100px;
-		}
-		&.right-lower{
-			left: auto;
-	    right: 100px;
-			top: auto;
-			bottom: 180px;
-			.kv_title,.kv_text{text-align: right;}
-		}
-		&.green{
-			.kv_title{color: rgb(0, 155, 142)}
-			.kv_text{color: rgb(0, 155, 142)}
-			.arrow:after{border-color: transparent transparent transparent rgb(0, 155, 142);}
-		}
-	}
-	.kv_title{
-		opacity: 1;
-    font-family: 'Noto sans JP';
-    font-size: 50px;
-		font-weight: bold;
-    letter-spacing: 0.1em;
-		line-height: 60px;
-    color: #fff;
-    text-align: left;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-	}
-	.kv_text{
-		position: absolute;
-    font-family: 'Noto sans JP';
-    font-size: 14px;
-    letter-spacing: 0.15em;
-    color: #fff;
-    text-align: left;
-    padding-right: 10px;
-    margin-top: 20px;
-		width: 100%;
-		.arrow:after{
-			position: absolute;
-	    right: -10px;
-	    top: 2px;
-	    bottom: 0;
-	    margin: auto;
-	    content: '';
-	    width: 0;
-	    height: 0;
-	    border-style: solid;
-	    border-width: 6px 0 6px 6px;
-			border-color: transparent transparent transparent #ffffff;
-		}
-		p{
-			display: inline;
-			position: relative;
-		}
-	}
-	.kv_icon{
-		position: relative;
-		top: -2.85vw;
-		left: -450px;
+
+.kv_slider{
+	position: relative;
+	height: 654px;
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+	&:after{
+		content: none !important;
 	}
 }
+.slide-wrap{
+	height: 100%;
+	position: relative;
+}
+.slide-image{
+	height: 100%;
+	position: relative;
+  top: 0;
+  left: 0;
+  color: #fff;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+	&:after{
+		z-index: 0;
+		content: "";
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border: 0px;
+		top: 0;
+		left: 0;
+	}
+}
+.owl-stage{
+	height: 100%;
+}
+.kv_text-wrap{
+	position: absolute;
+  top: 200px;
+  right: 0;
+  left: 0;
+  z-index: 50;
+  width: 850px;
+  height: 100px;
+  margin: auto;
+  text-align: center;
+	&.left-center{
+		left: 100px;
+    right: auto;
+	}
+	&.right-center{
+		left: auto;
+    right: 100px;
+		.kv_title,.kv_text{text-align: right;}
+	}
+	&.left-upper{
+		left: 100px;
+    right: auto;
+    top: 50px;
+    bottom: auto;
+	}
+	&.right-upper{
+		left: auto;
+    right: 100px;
+    top: 50px;
+    bottom: auto;
+		.kv_title,.kv_text{text-align: right;}
+	}
+	&.left-lower{
+		left: 180px;
+    right: auto;
+    top: auto;
+    bottom: 100px;
+	}
+	&.right-lower{
+		left: auto;
+    right: 100px;
+		top: auto;
+		bottom: 180px;
+		.kv_title,.kv_text{text-align: right;}
+	}
+	&.green{
+		.kv_title{color: rgb(0, 155, 142)}
+		.kv_text{color: rgb(0, 155, 142)}
+		.arrow:after{border-color: transparent transparent transparent rgb(0, 155, 142);}
+	}
+}
+.kv_title{
+	opacity: 1;
+  font-family: 'Noto sans JP';
+  font-size: 50px;
+	font-weight: bold;
+  letter-spacing: 0.1em;
+	line-height: 60px;
+  color: #fff;
+  text-align: left;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.kv_text{
+	position: absolute;
+  font-family: 'Noto sans JP';
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  color: #fff;
+  text-align: left;
+  padding-right: 10px;
+  margin-top: 20px;
+	width: 100%;
+	.arrow:after{
+		position: absolute;
+    right: -10px;
+    top: 2px;
+    bottom: 0;
+    margin: auto;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 0 6px 6px;
+		border-color: transparent transparent transparent #ffffff;
+	}
+	p{
+		display: inline;
+		position: relative;
+	}
+}
+.kv_icon{
+	position: relative;
+	top: -2.85vw;
+	left: -450px;
+}
+
 
 .admissionbox .admissionbox_table .contents_item .th{
 	display: flex;
@@ -405,9 +408,152 @@ h4.section_title-top{
 		}
 	}
 }
+/* eventbox */
+.eventbox {
+  width: 100%;
+	&.eventbox-top{
+		padding: 10px 0;
+	}
+	h4.section_title-top{
+		margin-top: 0;
+	}
+}
+
+
+.eventbox .eventbox_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.eventbox .eventbox_item {
+  position: relative;
+  width: 25%;
+  height: 330px;
+}
+
+.eventbox .eventbox_link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+}
+
+.eventbox a.eventbox_link {
+  opacity: 1;
+}
+
+.eventbox .eventbox_link .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.25;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.eventbox .eventbox_more {
+  opacity: 0;
+  position: absolute;
+  font-family: 'Robot-Regular', sans-serif;
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 0.15em;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  width: 70px;
+  height: 20px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: translate3d(0,40px,0);
+  transform: translate3d(0,40px,0);
+}
+
+.eventbox .eventbox_link:hover .eventbox_more {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.eventbox .eventbox_link:hover .overlay {
+  opacity: 0.4;
+}
+
+.eventbox .eventbox_wrapper {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+}
+
+.eventbox .eventbox_title {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'FjallaOne-Regular', sans-serif;
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: 0.05em;
+  text-align: right;
+}
+
+.eventbox .eventbox_title:before {
+  content: '';
+  border-top: 1px solid #fff;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-right: 10px;
+}
+
+.eventbox .eventbox_item-news .eventbox_date {
+  font-family: 'Roboto-Bold', sans-serif;
+  font-size: 10px;
+  color: #fff;
+  text-align: left;
+}
+
+.eventbox .eventbox_item-event .eventbox_date {
+  font-family: 'Roboto-Thin', sans-serif;
+  font-size: 40px;
+  color: #fff;
+  text-align: left;
+}
+
+.eventbox .eventbox_text {
+  font-family: 'NotoSansJP-Regular', sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  color: #fff;
+  text-align: left;
+}
+
+.eventbox .eventbox_item-event .eventbox_text {
+  margin-top: 15px;
+}
+
+.eventbox .eventbox_item-news .eventbox_text {
+  margin-top: 10px;
+}
 
 .eventbox.eventbox-top{
   justify-content: space-between;
+	padding: 0 !important;
 	.eventbox_list{
 		width: 1200px !important;
 		justify-content: space-between;
@@ -544,6 +690,42 @@ h4.section_title-top{
 
 
 @media screen and (min-width: 800px) and (max-width: 1200px){
+
+	  .eventbox .eventbox_item {
+	    height: 27.5vw;
+	  }
+
+	  .eventbox .eventbox_link {
+	    padding: 1.1vw;
+	  }
+
+	  .eventbox .eventbox_more {
+	    font-size: 1.1vw;
+	    width: 5.8vw;
+	    height: 1.6vw;
+	  }
+
+	  .eventbox .eventbox_title {
+	    font-size: 1.6vw;
+	  }
+
+	  .eventbox .eventbox_item-news .eventbox_date {
+	    font-size: 0.9vw;
+	  }
+
+	  .eventbox .eventbox_item-event .eventbox_date {
+	    font-size: 3.3vw;
+	  }
+
+	  .eventbox .eventbox_text {
+	    font-size: 1vw;
+	    line-height: 1.25vw;
+	  }
+
+	  .eventbox .eventbox_item-event .eventbox_text {
+	    margin-top: 1.25vw;
+	  }
+
 	.exam-link-btn{
 	    width: 81.3vw;
 	}
@@ -640,7 +822,35 @@ h4.section_title-top{
 		}
 	}
 
+	.eventbox .eventbox_item {
+	    width: 50%;
+	    height: 270px;
+	  }
 
+	  .eventbox .eventbox_link {
+	    padding: 10px;
+	  }
+
+	  .eventbox .eventbox_more {
+	    display: none;
+	  }
+
+	  .eventbox .eventbox_title {
+	    font-size: 18px;
+	  }
+
+	  .eventbox .eventbox_item-news .eventbox_date {
+	    font-size: 11px;
+	  }
+
+	  .eventbox .eventbox_item-event .eventbox_date {
+	    font-size: 32px;
+	  }
+
+	  .eventbox .eventbox_text {
+	    font-size: 11px;
+	    line-height: 16px;
+	  }
 .eventbox.eventbox-top .eventbox_list {
 	width: 100% !important;
 }
@@ -699,7 +909,7 @@ h4.section_title-top{
 
 @media screen and (max-width: 799px){
 	/*header*/
-	#kv-slider{
+	.kv_slider{
 		height: 60vw;
 		.kv_title{
     	font-size: 5vw !important;
@@ -748,7 +958,7 @@ h4.section_title-top{
 			height: 10px;
 		}
 	}
-	#kv-slider .slide-image{
+	.kv_slider .slide-image{
 		height: 60vw;
 	}
 }
@@ -884,7 +1094,7 @@ h4.section_title-top{
 }
 
 @media all and (-ms-high-contrast:none){
-	#kv-slider{
+	.kv_slider{
 		-webkit-clip-path: none;
 		clip-path: none;
 		.slide-image{

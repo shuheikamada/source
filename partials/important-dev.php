@@ -7,7 +7,7 @@
 	if($the_query) : ?>
 
 			<!-- Important News Start -->
-			<section class="section">
+			<section>
 				<div class="section_inner section_inner-wide">
 					<div class="admissionbox" data-scroll="once">
 						<div class="admissionbox_title">

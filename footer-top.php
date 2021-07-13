@@ -101,7 +101,7 @@
 
 <script>
 $(function(){
-    $('#kv-slider').slick({
+    $('.kv_slider').slick({
         accessibility: false,
         fade: true,
         autoplay: true,
