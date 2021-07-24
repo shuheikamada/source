@@ -14,16 +14,9 @@
 
         <div id="instafeed" class="instagram">
         <div class="instagram_list">
-            <!-- <div class="instagram_item" data-scroll="once">
-                <a href="https://www.instagram.com/aoyamagakuinuniversity/" target="_blank" class="more">
-                    <div class="overlay"></div>
-                    <p class="title">INSTAGRAM</p>
-                    <p class="text">@aoyamagakuinuniversity</p>
-                </a>
-            </div> -->
             <!-- SnapWidget -->
             <script src="https://snapwidget.com/js/snapwidget.js" defer></script>
-            <iframe src="https://snapwidget.com/embed/853472" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; margin-bottom:-3px;"></iframe>
+            <iframe src="https://snapwidget.com/embed/853472" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; margin-bottom:-3px;" loading="lazy"></iframe>
             <div class="read-more" data-scroll="once">
                 <a href="https://www.instagram.com/aoyamagakuinuniversity/" target="_blank" class="more">
                     <p class="title">INSTAGRAM</p>

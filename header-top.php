@@ -5,59 +5,72 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title></title>
+	<link rel="preconnect dns-prefetch" href="//cdnjs.cloudflare.com">
+	<link rel="preconnect dns-prefetch" href="//snapwidget.com">
+	<link rel="preconnect dns-prefetch" href="//www.instagram.com">
+	<link rel="preconnect dns-prefetch" href="//i.ytimg.com">
 
-	<!-- テスト用CSS設定 START -->
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>">
+	<title>青山学院大学 | Aoyama Gakuin University</title>
+	<!-- CSS設定 START -->
+	<!-- preload IE用polyfill -->
+	<script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
+	<link rel="preload" as="font" href="<?php bloginfo('template_url'); ?>/fonts/NotoSansJP-Regular-sub.woff2" crossorigin>
+	<link rel="preload" as="font" href="<?php bloginfo('template_url'); ?>/fonts/NotoSansJP-Medium-sub.woff2" crossorigin>
+	<link rel="preload" as="font" href="<?php bloginfo('template_url'); ?>/fonts/NotoSansJP-Bold-sub.woff2" crossorigin>
+	<link rel="preload" as="font" href="<?php bloginfo('template_url'); ?>/fonts/NotoSansJP-Light-sub.woff2" crossorigin>
+	<link rel="preload" as="font" href="<?php bloginfo('template_url'); ?>/fonts/FjallaOne-Regular.woff" crossorigin>
+	<link rel="preload" as="font" href="<?php bloginfo('template_url'); ?>/fonts/Roboto-Thin.woff" crossorigin>
+	<link rel="preload" as="font" href="<?php bloginfo('template_url'); ?>/fonts/Roboto-Light.woff" crossorigin>
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css-page-top/reset.css">
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css-page-top/common.css">
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css-page-top/module.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css-page-top/common-top.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css-page-top/top.css">
+
+	<link rel="preload" href="<?php bloginfo('template_url'); ?>/css-page-top/module-top.css" as="style">
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css-page-top/module-top.css" media="print" onload="this.media='all'">
+
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css-page-top/waslidemenu.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css-page-top/font-awesome.min.css">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+JP:wght@400;700;900&family=Roboto:wght@500;700;900&family=Lato:wght@700&family=Fjalla+One&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/print.css" rel="preload">
 
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/print.css">
+	<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" as="style">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" media="print" onload="this.media='all'">
+
+	<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" as="style">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" media="print" onload="this.media='all'">
 	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico">
-	<script src="<?php bloginfo('template_url'); ?>/js/jquery-3.2.1.min.js"></script>
-	<script src="<?php bloginfo('template_url'); ?>/js/navigation.js"></script>
-	<script src="<?php bloginfo('template_url'); ?>/js/scroll.js"></script>
-
-	<script src="<?php bloginfo('template_url'); ?>/js/sidebar.js"></script>
-	<script src="<?php bloginfo('template_url'); ?>/js/modal.js"></script>
-	<script src="<?php bloginfo('template_url'); ?>/js/toggle.js"></script>
-	<script src="<?php bloginfo('template_url'); ?>/js/btn.js"></script>
-	<script src="<?php bloginfo('template_url'); ?>/js/main.js"></script>
-	<!-- 追加JS -->
-	<script src="<?php bloginfo('template_url'); ?>/js/jquery.waslidemenu.js"></script>
 
 
+	<!-- ファーストビュー -->
+	<style>
+	.kv_slider{opacity:0;position:absolute;top:0;left:0;z-index:50;position:relative;height:654px;color:#fff;overflow:hidden;background-repeat:no-repeat;background-size:cover;background-position:center;-webkit-clip-path:polygon(0 0, 100% 0, 100% 90%, 0% 100%);clip-path:polygon(0 0, 100% 0, 100% 90%, 0% 100%);-webkit-transition:opacity 2s ease;transition:opacity 2s ease}.kv_slider:after{content:none !important}.kv_slider:first-child{display:block;opacity:1}.kv_slider:after{z-index:0;content:"";display:block;position:absolute;width:100%;height:100%;border:0px;top:0;left:0;background-color:rgba(29,68,82,0.3)}.top-slider{height:730px}.slick-slide img{width:100%;height:100%;object-fit:cover;position:relative;top:0}.slick-list{height:100%}.slick-track{height:100%}.slick-dots{bottom:85px !important;z-index:2}.slick-dots li.slick-active button:before{color:#fff !important}.slick-dots li button:before{font-size:10px !important}.slick-next{right:40px !important;z-index:1}.slick-next:before{content:'' !important;width:30px;height:30px;border:0px;border-top:solid 4px #fff;border-right:solid 4px #fff;-ms-transform:rotate(45deg);-webkit-transform:rotate(45deg);transform:rotate(45deg);position:absolute;top:50%;left:0;margin-top:-4px}.slick-prev{left:40px !important;z-index:1}.slick-prev:before{content:'' !important;width:30px;height:30px;border:0px;border-top:solid 4px #ffffff;border-right:solid 4px #ffffff;-ms-transform:rotate(-225deg);-webkit-transform:rotate(225deg);transform:rotate(225deg);position:absolute;top:50%;left:0;margin-top:-4px}.slick-slide div{height:100%}.slide-wrap{height:100%;position:relative}.slide-wrap a:hover{opacity:1}.slide-image{height:100%;position:relative;top:0;left:0;color:#fff;overflow:hidden;background-repeat:no-repeat;background-size:cover;background-position:center}.slide-image:after{z-index:0;content:"";display:block;position:absolute;width:100%;height:100%;border:0px;top:0;left:0}.kv_text-wrap{position:absolute;top:0;bottom:0;right:0;left:0;z-index:50;width:850px;height:100px !important;margin:auto;text-align:center}.kv_text-wrap.left-center{left:100px;right:auto}.kv_text-wrap.right-center{left:auto;right:100px}.kv_text-wrap.right-center .kv_title,.kv_text-wrap.right-center .kv_text{text-align:right}.kv_text-wrap.left-upper{left:100px;right:auto;top:50px;bottom:auto}.kv_text-wrap.right-upper{left:auto;right:100px;top:50px;bottom:auto}.kv_text-wrap.right-upper .kv_title,.kv_text-wrap.right-upper .kv_text{text-align:right}.kv_text-wrap.left-lower{left:180px;right:auto;top:auto;bottom:100px}.kv_text-wrap.right-lower{left:auto;right:100px;top:auto;bottom:180px}.kv_text-wrap.right-lower .kv_title,.kv_text-wrap.right-lower .kv_text{text-align:right}.kv_text-wrap.green .kv_title{color:#009b8e}.kv_text-wrap.green .kv_text{color:#009b8e}.kv_text-wrap.green .arrow:after{border-color:transparent transparent transparent #009b8e}.kv_title{opacity:1;font-family:'Noto Sans JP';font-size:50px;font-weight:bold;letter-spacing:0.1em;line-height:60px;color:#fff;text-align:left;-webkit-transition:all 0.5s ease;transition:all 0.5s ease}.kv_text{position:absolute;font-family:'Noto Sans JP';font-size:14px;letter-spacing:0.15em;color:#fff;text-align:left;padding-right:10px;margin-top:20px;width:100%}.kv_text .arrow:after{position:absolute;right:-10px;top:2px;bottom:0;margin:auto;content:'';width:0;height:0;border-style:solid;border-width:6px 0 6px 6px;border-color:transparent transparent transparent #ffffff}.kv_text p{display:inline;position:relative}.kv_icon{position:relative;top:-2.85vw;left:-450px}@media only screen and (max-width: 799px){.top-slider{height:60vw}.kv_slider{height:60vw !important}.kv_slider .kv_title{font-size:5vw !important;line-height:7vw !important}.kv_slider .kv_text{font-size:12px !important;margin-top:1vw;height:auto !important;position:relative}.kv_slider .kv_text-wrap{width:70%}.kv_slider .kv_text-wrap.center{bottom:0;top:0}.kv_slider .kv_text-wrap.left-center{left:6vw;top:0;bottom:0}.kv_slider .kv_text-wrap.right-center{right:6vw;top:0;bottom:0}.kv_slider .kv_text-wrap.left-upper{left:6vw;top:5vw}.kv_slider .kv_text-wrap.right-upper{right:6vw;top:5vw}.kv_slider .kv_text-wrap.left-lower{left:6vw;bottom:7vw;height:auto !important}.kv_slider .kv_text-wrap.right-lower{right:6vw;bottom:13vw;height:auto !important}.kv_inner{width:100%;left:0;padding-left:30px;padding-top:20px;padding-right:20px}.slick-dots{bottom:30px !important}.slick-next{right:10px !important}.slick-prev{left:10px !important}.slick-next,.slick-prev{width:15px !important;height:15px !important}.slick-next:before,.slick-prev:before{width:20px;height:20px}.kv_slider .slide-image{height:60vw}}
 
-	<!-- テスト用CSS設定 END -->
 
+	</style>
+	<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		var preWidth = window.innerWidth;
+		if (preWidth < 800) {
+			var elem = document.getElementById('sp-logo');
+			var h = document.getElementById('header').offsetHeight;
+			elem.style.marginTop = h + 'px';
+		}
+		else {
+			var elem = document.querySelectorAll("main");
+			var h = document.getElementById('header').offsetHeight - 25;
+			elem[0].style.marginTop = h + 'px';
+		}
+	});
 
-	<!-- 固定用CSS設定 START -->
-
-	<script src="<?php bloginfo('template_url'); ?>/js/scroll-animation.min.js" async></script>
+	</script>
+	<!-- ファーストビュー END -->
 
 <?php wp_deregister_script('jquery'); ?>
 <?php wp_head(); ?>
 </head>
 
 <body id="<?php echo esc_attr( $post->post_name ); ?>" class="top">
+<a id="btntop" href="#" style="display: block;">TOP</a>
 
-
-	<div id="fb-root"></div>
-	<script>
-		(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s);
-			js.id = id;
-			js.src = 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.12';
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-	</script>
 	<!-- ヘッダー -->
 
 			<?php if ( is_user_logged_in() ) :?>
@@ -78,119 +91,7 @@
 					$query = new WP_Query( $args );
 ?>
 <?php if( $query->have_posts() ) : ?>
-
-
 	<style>
-	<?php if(is_page_template('page-2nd.php')) : ?>
-
-		/* KV2ND: 2020MODULE ON */
-		<?php if( have_rows('第二階層モジュール') ):  ?>
-		<?php while ( have_rows('第二階層モジュール') ) : the_row(); //値のループ ?>
-			<?php if( get_row_layout() == 'コンテンツセット' ): while ( have_rows('コンテンツセット') ) : the_row(); //値のループ ?>
-				<?php if( get_row_layout() == 'module-2nd-a' ): ?>
-
-				/* KV2ND: 2020MODULE CSS */
-				@media screen and (min-width: 1199px){
-					.sidebar{
-						top: 0px!important;
-					}
-				}
-				@media screen and (min-width: 1099px) and (max-width: 1198px){
-					.sidebar{
-						top: 0px!important;
-					}
-				}
-				@media screen and (min-width: 899px) and (max-width: 1098px){
-					.sidebar{
-						top: 0px!important;
-					}
-				}
-				@media screen and (min-width: 799px) and (max-width: 898px){
-					.sidebar{
-						top: 0px!important;
-					}
-				}
-				@media screen and (max-width: 425px){
-					.emergency_icon{
-						display:none;
-					}
-					.emergency-text{
-						width:100%;
-						margin-bottom: 10px;
-						font-family: 'NotoSansJP-bold', sans-serif;
-						font-weight: bold;
-					}
-					.emergency-date{
-						font-family: 'NotoSansJP-Regular', sans-serif;
-						font-weight: 100;
-					}
-				}
-				<?php endif; ?>
-			<?php endwhile; endif; ?>
-		<?php endwhile; else: ?>
-		/* KV2ND: 2020MODULE OFF */
-			/* KV2ND: 2020MODULE OFF CSS */
-
-		@media screen and (min-width: 1199px){
-			.sidebar{
-				top: 300px!important;
-			}
-		}
-		@media screen and (min-width: 1099px) and (max-width: 1198px){
-			.sidebar{
-				top: 300px!important;
-			}
-		}
-		@media screen and (min-width: 899px) and (max-width: 1098px){
-			.sidebar{
-				top: 275px!important;
-			}
-		}
-		@media screen and (min-width: 799px) and (max-width: 898px){
-			.sidebar{
-				top: 250px!important;
-			}
-		}
-		@media screen and (max-width: 425px){
-			.emergency_icon{
-				display:none;
-			}
-			.emergency-text{
-				width:100%;
-				margin-bottom: 10px;
-				font-family: 'NotoSansJP-bold', sans-serif;
-				font-weight: bold;
-			}
-			.emergency-date{
-				font-family: 'NotoSansJP-Regular', sans-serif;
-				font-weight: 100;
-			}
-		}
-		<?php endif; ?>
-
-	<?php else: ?>
-	/* KV3RD: */
-	/* KV3R:  CSS */
-	@media screen and (min-width: 1199px){
-		.sidebar{
-			top: 200px!important;
-		}
-	}
-	@media screen and (min-width: 1099px) and (max-width: 1198px){
-		.sidebar{
-			top: 200px!important;
-		}
-	}
-	@media screen and (min-width: 899px) and (max-width: 1098px){
-		.sidebar{
-			top: 175px!important;
-		}
-	}
-	@media screen and (min-width: 799px) and (max-width: 898px){
-		.sidebar{
-			top: 150px!important;
-		}
-	}
 	@media screen and (max-width: 425px){
 		.emergency_icon{
 			display:none;
@@ -206,8 +107,6 @@
 			font-weight: 100;
 		}
 	}
-
-	<?php endif; ?>
 	</style>
   	<div id="emergency" class="emergency">
 			<div class="emergency_inner">
@@ -278,17 +177,6 @@
 			</div>
 		</div>
 		<nav id="global">
-<script>
-  (function() {
-    var cx = '015456245027213990632:5z_pbtjgvc8';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
 
 			<form id="nav-search" name="nav_search_text" method="get" action="/search-result.html">
 				<input name="q" type="text" placeholder="キーワードを入力" autofocus="">
@@ -299,7 +187,7 @@
 		</nav>
 	</header>
 	<div id="sp-logo">
-		<h1><a href="/"><img src="<?php bloginfo('template_url'); ?>/images/common/logo.svg" height="45" alt="青山学院大学"></a></h1>
+		<h1><a href="/"><img src="<?php bloginfo('template_url'); ?>/images/common/new-logo.svg" height="45" alt="青山学院大学"></a></h1>
 	</div>
 	<!-- /ヘッダー -->
 
@@ -454,30 +342,6 @@
 	</div>
 	<!-- /ハンバーガー -->
 
-	<style>
-	.kv.kv-top .kv_wrapper {
-	    opacity: 0;
-			display: none;
-		}
-	.kv_slider {
-	animation: kvFadeIn 2s ease 0s 1 normal;
-	-webkit-animation: kvFadeIn 2s ease 0s 1 normal;
-	}
-	@keyframes kvFadeIn {
-	    0% {opacity: 0}
-	    100% {opacity: 1}
-	}
-	@-webkit-keyframes kvFadeIn {
-	    0% {opacity: 0}
-	    100% {opacity: 1}
-	}
-	@media screen and (max-width:799px) {
-		.kv_slider {
-		width: 100%;
-		max-height: 250px;
-		}
-	}
-	</style>
 	<main class="wh top">
 		<!-- kv top page-->
 		<section class="top-slider">
@@ -486,10 +350,9 @@
 					<?php while(have_rows('メインビジュアル')): the_row(); ?>
 					<div class="slide-wrap">
 						<a href="<?php the_sub_field('kv-link-01'); ?>" target="<?php the_sub_field('kv-link-option'); ?>">
-							<div class="slide-image" style="background-image: url(<?php the_sub_field('画像'); ?>);"></div>
+								<img src="<?php the_sub_field('画像'); ?>" loading="lazy">
 
 							<div class="kv_text-wrap <?php the_sub_field('text-position'); ?> <?php the_sub_field('text-color'); ?>">
-
 									<h2 class="kv_title"><?php the_sub_field('kv-title-01'); ?></h2>
 									<?php if(get_sub_field('kv-title-02')):?>
 										<div class="kv_text"><p class="arrow"><?php the_sub_field('kv-title-02'); ?></p></div>

@@ -30,13 +30,15 @@
 
 											<div class="th"><h5><?php the_field('重要ニュースリスト見出し','33748'); ?></h5><p><?php the_field('タイトル'); ?></p></div>
 											<div class="td">
-											<?php while ( have_rows('項目') ) : the_row(); //値のループ ?>
-											<?php if(get_sub_field('リンク先')) : ?>
-												<a href="<?php the_sub_field('リンク先'); ?>"<?php if(get_sub_field('別ウインドウ') == true){?> target="_blank"<?php } ?>><?php the_sub_field('テキスト'); ?></a>
-												<?php else : ?>
-												<?php the_sub_field('テキスト'); ?><br><br>
-												<?php endif; ?>
-												<?php endwhile; ?>
+												<div class="td-inner">
+												<?php while ( have_rows('項目') ) : the_row(); //値のループ ?>
+												<?php if(get_sub_field('リンク先')) : ?>
+													<a href="<?php the_sub_field('リンク先'); ?>"<?php if(get_sub_field('別ウインドウ') == true){?> target="_blank"<?php } ?>><?php the_sub_field('テキスト'); ?></a>
+													<?php else : ?>
+													<?php the_sub_field('テキスト'); ?><br><br>
+													<?php endif; ?>
+													<?php endwhile; ?>
+												</div>
 											</div>
 
 										</li>

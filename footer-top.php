@@ -4,16 +4,16 @@
 			<div class="footer_inner">
 				<div class="footer_lists">
 					<div class="footer_list_upper flexbox">
-						<?php if(have_rows('フッタ最上部リンク')): ?>
-						<?php while(have_rows('フッタ最上部リンク')): the_row(); ?>
+						<?php if(have_rows('フッタ最上部リンク',13684)): ?>
+						<?php while(have_rows('フッタ最上部リンク',13684)): the_row(); ?>
 						<div class="footer_item footer_item-title"><a href="<?php the_sub_field('リンク'); ?>"><?php the_sub_field('項目'); ?></a></div>
 						<?php endwhile;?>
 						<?php endif;?>
 					</div>
 
 					<div class="footer_list_middle flexbox sp-none">
-						<?php if(have_rows('フッターリンクリスト')): ?>
-						<?php while(have_rows('フッターリンクリスト')): the_row(); ?>
+						<?php if(have_rows('フッターリンクリスト',13684)): ?>
+						<?php while(have_rows('フッターリンクリスト',13684)): the_row(); ?>
 
 						<div class="footer_list_column">
 							<?php if(have_rows('カラム')): ?>
@@ -42,10 +42,10 @@
 						<li class="footer_infoItem"><a href="<?php the_sub_field('リンク'); ?>"<?php if(get_sub_field('別ウインドウ') == true){?> target="_blank"<?php } ?>><?php the_sub_field('項目'); ?></a></li>
 					</ul>
 					<ul class="sns_list">
-						<li class="sns_item"><a href="<?php the_field('facebook_url', $front_id); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
-						<li class="sns_item"><a href="<?php the_field('twitter_url', $front_id); ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
-						<li class="sns_item"><a href="<?php the_field('youtube_url', $front_id); ?>" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
-						<li class="sns_item"><a href="<?php the_field('instagram_url', $front_id); ?>" target="_blank"><i class="fa fa-instagram"></i></a></li>
+						<li class="sns_item"><a href="<?php the_field('facebook_url', 13684); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+						<li class="sns_item"><a href="<?php the_field('twitter_url', 13684); ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+						<li class="sns_item"><a href="<?php the_field('youtube_url', 13684); ?>" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+						<li class="sns_item"><a href="<?php the_field('instagram_url', 13684); ?>" target="_blank"><i class="fa fa-instagram"></i></a></li>
 					</ul>
 					<ul class="footer_list_bottom flex">
 						<div class="footer_list">
@@ -84,24 +84,39 @@
 						</div>
 					</ul>
 					<div class="sp-field">
-						<h5 class="footer_logo"><img src="<?php bloginfo('template_url'); ?>/images/common/footer_new_logo.svg" alt="青山学院大学" class="footer_logoImage"></h5>
+						<h5 class="footer_logo"><img src="<?php bloginfo('template_url'); ?>/images/common/footer_new_logo.svg" alt="青山学院大学" class="footer_logoImage lazy"></h5>
 						<p class="footer_copyright">Copyright © AOYAMA GAKUIN UNIVERSITY<br>All Rights Reserved.</p>
 					</div>
 				</div>
 			</div>
 		</footer>
 	</main>
-	<script src="<?php bloginfo('template_url'); ?>/js/fitie.js"></script>
 
 	<!-- /フッター -->
-	<?php wp_footer(); ?>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+	<?php //wp_footer(); ?>
+	<script src="<?php bloginfo('template_url'); ?>/js/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/js/top-combine.min.js"></script>
+
+	<!-- 追加JS -->
+	<script src="<?php bloginfo('template_url'); ?>/js/jquery.waslidemenu.js" defer></script>
+	<script src="<?php bloginfo('template_url'); ?>/js/scroll-animation.min.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" defer></script>
+
+
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+
 
 <script>
+
+
 $(function(){
+		$("img.lazy").lazyload();
     $('.kv_slider').slick({
+				//lazyLoad: 'ondemand',
         accessibility: false,
         fade: true,
         autoplay: true,
