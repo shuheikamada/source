@@ -1,0 +1,331 @@
+$noto: 'Noto Sans JP', "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", 'yu gothic',"メイリオ", "Meiryo", "verdana", sans-serif;
+/*------------------------
+		kv
+------------------------*/
+
+.top-slider{
+	height: 730px;
+}
+.kv_slider img{width:100%;height:auto;object-fit:cover;position:relative;top:0}
+.slick-slide img{width:100%;height:100%;object-fit:cover;position:relative;top:0}
+.kv_slider {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    position: relative;
+  	height: 654px;
+    color: #fff;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+    -webkit-transition: opacity 2s ease;
+    transition: opacity 2s ease;
+    &:after{
+  		content: none !important;
+  	}
+}
+
+.kv_slider:first-child {
+    display: block;
+    opacity: 1;
+}
+
+.kv_slider:after {
+    z-index: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    top: 0;
+    left: 0;
+    background-color: rgba(29, 68, 82, 0.3);
+}
+
+
+.slick-slide img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: relative;
+	top: 0;
+}
+.slick-list{
+  height: 100%;
+}
+.slick-track{
+  height: 100%;
+}
+.slick-dots{
+	bottom: 85px !important;
+  z-index: 2;
+	li.slick-active button:before{
+		color: #fff !important;
+	}
+	li button:before{
+		font-size: 10px !important;
+	}
+}
+.slick-next{
+	right: 40px !important;
+  z-index: 1;
+	&:before{
+		content: '' !important;
+    width: 30px;
+    height: 30px;
+    border: 0px;
+    border-top: solid 4px #fff;
+    border-right: solid 4px #fff;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(
+45deg
+);
+    transform: rotate(
+45deg
+);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -4px;
+	}
+}
+.slick-prev{
+	left: 40px !important;
+  z-index: 1;
+	&:before{
+		content: '' !important;
+    width: 30px;
+    height: 30px;
+    border: 0px;
+    border-top: solid 4px #ffffff;
+    border-right: solid 4px #ffffff;
+    -ms-transform: rotate(-225deg);
+    -webkit-transform: rotate(
+225deg
+);
+    transform: rotate(
+225deg
+);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -4px;
+	}
+}
+
+.slick-slide div{
+  height: 100%;
+}
+.slide-wrap{
+	height: 100%;
+	position: relative;
+  a:hover{
+    opacity: 1;
+  }
+}
+.slide-image{
+	height: 100%;
+	position: relative;
+  top: 0;
+  left: 0;
+  color: #fff;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+	&:after{
+		z-index: 0;
+		content: "";
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border: 0px;
+		top: 0;
+		left: 0;
+	}
+}
+
+.kv_text-wrap{
+	position: absolute;
+  top: 200px;
+  right: 0;
+  left: 0;
+  z-index: 50;
+  width: 850px;
+  height: 100px !important;
+  margin: auto;
+  text-align: center;
+	&.left-center{
+		left: 100px;
+    right: auto;
+	}
+	&.right-center{
+		left: auto;
+    right: 100px;
+		.kv_title,.kv_text{text-align: right;}
+	}
+	&.left-upper{
+		left: 100px;
+    right: auto;
+    top: 50px;
+    bottom: auto;
+	}
+	&.right-upper{
+		left: auto;
+    right: 100px;
+    top: 50px;
+    bottom: auto;
+		.kv_title,.kv_text{text-align: right;}
+	}
+	&.left-lower{
+		left: 180px;
+    right: auto;
+    top: auto;
+    bottom: 100px;
+	}
+	&.right-lower{
+		left: auto;
+    right: 100px;
+		top: auto;
+		bottom: 180px;
+		.kv_title,.kv_text{text-align: right;}
+	}
+	&.green{
+		.kv_title{color: rgb(0, 155, 142)}
+		.kv_text{color: rgb(0, 155, 142)}
+		.arrow:after{border-color: transparent transparent transparent rgb(0, 155, 142);}
+	}
+}
+.kv_title{
+	opacity: 1;
+  font-family: $noto;
+  font-size: 50px;
+	font-weight: bold;
+  letter-spacing: 0.1em;
+	line-height: 60px;
+  color: #fff;
+  text-align: left;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.kv_text{
+	position: absolute;
+  font-family: $noto;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  color: #fff;
+  text-align: left;
+  padding-right: 10px;
+  margin-top: 20px;
+	width: 100%;
+	.arrow:after{
+		position: absolute;
+    right: -10px;
+    top: 2px;
+    bottom: 0;
+    margin: auto;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 0 6px 6px;
+		border-color: transparent transparent transparent #ffffff;
+	}
+	p{
+		display: inline;
+		position: relative;
+	}
+}
+.kv_icon{
+	position: relative;
+	top: -2.85vw;
+	left: -450px;
+}
+
+@media only screen and (max-width: 799px){
+  .top-slider{
+	   height: 60vw;
+	}
+		.kv_slider{
+			height: 60vw !important;
+			.kv_title{
+	    	font-size: 5vw !important;
+				line-height: 7vw !important;
+			}
+			.kv_text{
+				font-size: 12px !important;
+	    	margin-top: 1vw;
+	      height: auto !important;
+	      position: relative;
+			}
+			.kv_text-wrap{
+				width: 70%;
+	      &.center{
+	        bottom: 0;
+	        top: 0;
+	      }
+	      &.left-center{
+	        left: 6vw;
+	        top: 0;
+	        bottom: 0;
+	      }
+	      &.right-center{
+	        right: 6vw;
+	        top: 0;
+	        bottom: 0;
+	      }
+				&.left-upper{
+					left: 6vw;
+			    top: 5vw;
+				}
+				&.right-upper{
+			    right: 6vw;
+			    top: 5vw;
+				}
+				&.left-lower{
+					left: 6vw;
+			    bottom: 7vw;
+	        height: auto !important;
+				}
+				&.right-lower{
+			    right: 6vw;
+					bottom: 13vw;
+	        height: auto !important;
+				}
+			}
+		}
+		.kv_inner {
+        width: 100%;
+        left: 0;
+        padding-left: 30px;
+        padding-top: 20px;
+        padding-right: 20px;
+    }
+		.slick-dots{
+			bottom: 30px !important;
+		}
+		.slick-next{
+			right: 10px !important;
+		}
+		.slick-prev{
+			left: 10px !important;
+		}
+		.slick-next, .slick-prev{
+			width: 15px !important;
+			height: 15px !important;
+			&:before{
+				width: 20px;
+				height: 20px;
+			}
+		}
+		.kv_slider .slide-image{
+			height: 60vw;
+		}
+}

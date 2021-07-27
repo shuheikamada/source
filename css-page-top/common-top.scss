@@ -1,4 +1,4 @@
-
+$noto: 'Noto Sans JP', "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", 'yu gothic',"メイリオ", "Meiryo", "verdana", sans-serif;
 #wpadminbar{
 	position: fixed!important;
 }
@@ -59,14 +59,15 @@
 }
 
 .emergency .wrapper .date {
-	font-family: 'Roboto-Medium', sans-serif;
+	font-family: 'Roboto-Light';
 	font-size: 16px;
 	letter-spacing: 0.1em;
 	margin-bottom: 5px;
 }
 
 .emergency .wrapper .text {
-	font-family: 'NotoSansJP-Regular', sans-serif;
+	font-family: $noto;
+	font-weight: 400;
 	font-size: 18px;
 	letter-spacing: 0.1em;
 	color: #fff;
@@ -263,7 +264,7 @@
 }
 
 .top-en .toggle-aoyama-style label span {
-	font-family: 'Roboto-Regular', sans-serif;
+	font-family: 'Roboto-Light';
 }
 
 /*TOGGLE LANGUAGE START*/
@@ -281,7 +282,7 @@
 	display: block;
 }
 .top-en .toggle-language label span {
-	font-family: 'Roboto-Regular', sans-serif;
+	font-family: 'Roboto-Light';
 }
 /*TOGGLE LANGUAGE END*/
 
@@ -532,7 +533,7 @@
 #category-nav li a small {
 	display: block;
 	margin-top: 5px;
-	font-family: 'Roboto-Light', sans-serif;
+	font-family: 'Roboto-Light';
 	font-size: 7px;
 	-webkit-transform: scale(0.9);
 	-webkit-transform-origin: 50% 50%;
@@ -810,7 +811,8 @@ padding:36px 0;
 		width: 20px;
 	}
 	#global #nav-search input[type="text"] {
-		font: 18px/1 'NotoSansJP-Medium', sans-serif;
+		font: 18px/1 'Noto Sans JP';
+    font-weight: 500;
 		background: none;
 		border: none;
 	}
@@ -859,7 +861,8 @@ padding:36px 0;
 		border-bottom: 1px solid rgba(255, 255, 255, .5);
 	}
 	#inf-list li label.tab-label {
-		font: bold 12px/1 'NotoSansJP-Medium', sans-serif;
+		font: bold 12px/1  'Noto Sans JP';
+    font-weight: 500;
 	}
 }
 
@@ -1084,7 +1087,8 @@ padding:36px 0;
 .link-btn a small {
 	color: #d5efec;
 	display: block;
-	font: 400 10px/1 'NotoSansJP-Regular', sans-serif;
+	font: 400 10px/1 'Noto Sans JP';
+  font-weight: 400;
 }
 
 .link-btn a span:first-child {
@@ -1211,7 +1215,7 @@ padding:36px 0;
 
 .navBox01_item span {
 	display: block;
-	font-family: 'Roboto-Light', sans-serif;
+	font-family: 'Roboto-Light';
 	font-size: 10px;
 	margin-bottom: 5px;
 }
@@ -1253,7 +1257,7 @@ padding:36px 0;
 
 .navBox02_item span {
 	display: block;
-	font-family: 'Roboto-Light', sans-serif;
+	font-family: 'Roboto-Light';
 	font-size: 10px;
 	margin-bottom: 5px;
 }
@@ -1296,7 +1300,7 @@ padding:36px 0;
 
 .top-en .navBox03_item-title a {
 	margin-top: 30px;
-	font-family: 'Roboto-Light', sans-serif;
+	font-family: 'Roboto-Light';
 }
 
 @media print, screen and (min-width:800px) and (max-width:999px) {
@@ -1336,7 +1340,7 @@ padding:36px 0;
 	.top-en .spNavBox02_item span {
 		display: inline-block;
 		margin-left: 15px;
-		font-family: 'Roboto-Light', sans-serif;
+		font-family: 'Roboto-Light';
 		font-size: 9px;
 	}
 
@@ -1488,7 +1492,8 @@ padding:36px 0;
 		padding-right: 50px;
 		width: 100%;
 		height: 100%;
-		font-family: 'NotoSansJP-Medium', sans-serif;
+		font-family: $noto;
+    font-weight: 500;
 		font-size: 14px;
 		color: #fff;
 		border-bottom: 1px solid rgba(255, 255, 255, 0.15)
@@ -1563,7 +1568,8 @@ padding:36px 0;
 	.spNavBox02_item a {
 		display: block;
 		padding: 10px 10px;
-		font-family: 'NotoSansJP-Medium', sans-serif;
+		font-family: $noto;
+    font-weight: 500;
 		font-size: 12px;
 		color: #fff;
 		border: 1px solid #fff
@@ -1603,14 +1609,15 @@ padding:36px 0;
 	.spNavBox03_item a {
 		position: relative;
 		display: block;
-		font-family: 'NotoSansJP-Medium', sans-serif;
+		font-family: $noto;
+    font-weight: 500;
 		font-size: 14px;
 		color: #fff;
 		padding-left: 25px;
 		padding-right: 10px
 	}
 	.top-en .spNavBox03_item a {
-		font-family: 'Roboto-Medium', sans-serif
+		font-family: 'Roboto-Light';
 	}
 	.spNavBox03_item a:before {
 		background-image: url(../images/common/arrow-white.svg);
@@ -1773,7 +1780,7 @@ font-weight: 500;
 }
 
 .footer-en .footer_item a {
-	font-family: 'Roboto-Medium', sans-serif;
+	font-family: 'Roboto-Light';
 }
 
 .footer_item-title a {
@@ -1815,7 +1822,8 @@ font-weight: 500;
 }
 
 .footer_infoItem a {
-	font-family: 'NotoSansJP-Regular', sans-serif;
+	font-family: $noto;
+	font-weight: 400;
 	font-size: 10px;
 	color: #b6b6b6;
 	padding: 0 10px;
@@ -1896,14 +1904,6 @@ font-weight: 500;
 
 	.footer .copy:after {
 		display: none;
-	}
-
-	.footer_list {
-		width: 100%;
-		padding-left: 15px;
-		padding-right: 15px;
-		padding-bottom: 0;
-		font-size: 12px;
 	}
 
 	.footer_item {
@@ -2075,75 +2075,14 @@ body.top.show {
 
 
 /* top改修 */
-@media only screen and (max-width: 799px){
-
-  /* footer */
-  .footer-list{
-		padding-left: 0;
-	}
-	.footer_list_upper{
-		flex-direction: column;
-	}
-	.footer_list_upper .footer_item + .footer_item{
-		padding: 0;
-		border-left: none;
-	}
-	.footer_list_upper .footer_item-title a{
-		font-size: 14px;
-	}
-	.footer_list_upper{
-		margin-bottom: 0;
-	}
-	.footer_list_bottom{
-		flex-direction: column;
-    width: 100%;
-    padding-left: 0;
-    background-color: #1a1a1a;
-		.footer_item-title a{
-			font-size: 15px;
-		}
-		.footer_item-en a{
-			font-size: 10px;
-		}
-	}
-
-	.sp-none{
-		display: none !important;
-	}
-	.sns_list{
-		margin-bottom: 0 !important;
-		width: 100% !important;
-		&_bottom{
-			width: 100%;
-		}
-	}
-	.sns_item a{
-		font-size: 33px !important;
-	}
-
-	.footer_copy{
-		background: none !important;
-		padding-bottom: 0 !important;
-	}
-	.footer_logo{
-		margin-top: 20px;
-	}
-	.sp-field{
-		background-image: url(https://stg.aoyama.2xx.jp/wp-content/themes/aoyamagakuin/images/common/footer.png);
-		background-position: center center;
-		background-size: cover;
-		background-repeat: no-repeat;
-    padding: 10px 0 30px;
-	}
-}
 
 /*footer*/
 .footer_lists{
 	flex-direction: column;
-	width: 1400px !important;
+	width: 1400px;
 }
 .footer_copy{
-	height: auto !important;
+	height: auto;
 }
 .footer_list_upper{
 	display: flex;
@@ -2160,7 +2099,7 @@ body.top.show {
 	}
 }
 .footer_list_middle{
-  display: flex !important;
+  display: flex;
 	margin-bottom: 60px;
 	.footer_list_column{
 		.footer_item{
@@ -2173,14 +2112,14 @@ body.top.show {
 }
 
 .sns_list{
-  width: 214px !important;
+  width: 214px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	margin: 25px auto 40px;
 }
 .sns_item a{
-	font-size: 40px !important;
+	font-size: 40px;
 }
 
 .footer_list_bottom{
@@ -2201,12 +2140,74 @@ body.top.show {
 
 @media screen and (max-width: 1330px){
 	.footer_lists{
-		width: 95% !important;
+		width: 95%;
 	}
 	.footer_list_middle{
 		flex-wrap: wrap;
 	}
 	.footer_list_column{
 		margin-bottom: 30px;
+	}
+}
+
+
+@media only screen and (max-width: 799px){
+
+  /* footer */
+	.footer_lists{
+		width: 90%;
+	}
+	.footer_list{
+		width: 90%;
+		padding-bottom: 0;
+		font-size: 12px;
+		margin: 0 auto;
+	}
+	.footer_list:last-child {
+	    margin: 0 auto;
+	}
+	.footer_list_upper{
+		flex-direction: column;
+    width: 100%;
+    padding-bottom: 0;
+	}
+	.footer_list_upper .footer_item + .footer_item{
+		padding: 0;
+    border-left: none;
+	}
+	.footer_list_bottom{
+		flex-direction: column;
+    width: 100%;
+    padding-left: 0;
+    background-color: #1a1a1a;
+	}
+
+	.sp-none{
+		display: none;
+	}
+	.sns_list{
+		margin-bottom: 0;
+		width: 100%;
+		&_bottom{
+			width: 100%;
+		}
+	}
+	.sns_item a{
+		font-size: 33px;
+	}
+
+	.footer_copy{
+		background: none;
+		padding-bottom: 0;
+	}
+	.footer_logo{
+		margin-top: 20px;
+	}
+	.sp-field{
+		background-image: url(../images/common/footer.png);
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+    padding: 10px 0 30px;
 	}
 }

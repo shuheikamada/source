@@ -65,6 +65,30 @@ $(document).ready(function() {
 		$('#modal_burger').height(screen.height);
 	});
 
+  	// モーダル1の開閉
+  	$('.toggle-aoyama-style').click(function() {
+  		current_scrollY = $(window).scrollTop();
+  		$('main').css({
+  			position: 'fixed',
+  			width: '100%',
+  			top: -1 * current_scrollY
+  		});
+  		$('footer').css({
+  			position: 'fixed',
+  			width: '100%',
+  			top: (-1 * current_scrollY) + $('main').height()
+  		});
+  		$('#modal_aoyama_style').fadeIn(300);
+  	});
+
+  	$('.close_modal_aoyama_style').click(function() {
+  		$('main').attr({style: ''});
+  		$('footer').attr({style: ''});
+  		$('html, body').prop({scrollTop: current_scrollY});
+  		$('#modal_aoyama_style').fadeOut(300);
+  	});
+
+
 	// モーダル2の開閉
 	$('.toggle-language').click(function() {
 		current_scrollY = $(window).scrollTop();

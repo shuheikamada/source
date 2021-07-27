@@ -366,7 +366,7 @@
 						</ul>
 					</div>
 				</nav>
-				<?php get_template_part('sp-header'); ?>
+				<?php get_template_part('sp-header-top'); ?>
 
 			</div>
 		</div>

@@ -1,0 +1,9 @@
+top-combine.js/min.js
+->もともとあったJSファイルを取捨し結合しています。
+minify化してtop-combine.min.jsにし、そちらを読みこませています。
+
+setnav.js/min.js
+->ヘッダーナビ用JSを速度改善のため切り分けてminify化しています。
+
+picturefill,min.js
+->IE用pictureタグpolyfill
