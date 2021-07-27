@@ -28,7 +28,7 @@
 
 										<li class="contents_item">
 
-											<div class="th"><h5><?php the_field('重要ニュースリスト見出し','33748'); ?></h5><p><?php the_field('タイトル'); ?></p></div>
+											<div class="th"><h5><?php the_field('重要ニュースリスト見出し','278346'); ?></h5><p><?php the_field('タイトル'); ?></p></div>
 											<div class="td">
 												<div class="td-inner">
 												<?php while ( have_rows('項目') ) : the_row(); //値のループ ?>

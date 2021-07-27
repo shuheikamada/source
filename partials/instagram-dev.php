@@ -1,12 +1,3 @@
-<?php
-/* User ID, Token */
-// $instagramUserID = 5368487832;
-// $instagramToken  = '5368487832.cfb9079.644e27092593424e84c903dc6c4d6758';
-
-/* Get API ( Require HTTPS ) JSON Convert */
-// $instagramApiURI    = 'https://api.instagram.com/v1/users/'.$instagramUserID.'/media/recent?access_token='.$instagramToken.'&count=7';
-// $instagramDates = json_decode(file_get_contents($instagramApiURI));
-?>
 
 <!-- instagram -->
 <section class="section">
@@ -19,10 +10,12 @@
             <iframe src="https://snapwidget.com/embed/853472" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; margin-bottom:-3px;" loading="lazy"></iframe>
             <div class="read-more" data-scroll="once">
                 <a href="https://www.instagram.com/aoyamagakuinuniversity/" target="_blank" class="more">
-                    <p class="title">INSTAGRAM</p>
-                    <p class="text">@aoyamagakuinuniversity</p>
+                  <img
+									data-original="<?php bloginfo('template_url'); ?>/images/insta-cover.svg"
+									alt="instagram"
+									class="lazy"
+									loading="lazy">
                 </a>
-
             </div>
         </div>
 

@@ -1,4 +1,4 @@
-
+$noto: 'Noto Sans JP', "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", 'yu gothic',"メイリオ", "Meiryo", "verdana", sans-serif;
 /*------------------------
 		kv
 ------------------------*/
@@ -203,7 +203,7 @@
 }
 .kv_title{
 	opacity: 1;
-  font-family: 'Noto Sans JP';
+  font-family: $noto;
   font-size: 50px;
 	font-weight: bold;
   letter-spacing: 0.1em;
@@ -215,7 +215,7 @@
 }
 .kv_text{
 	position: absolute;
-  font-family: 'Noto Sans JP';
+  font-family: $noto;
   font-size: 14px;
   letter-spacing: 0.15em;
   color: #fff;

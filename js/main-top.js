@@ -66,21 +66,17 @@ $(document).ready(function(){
     $('.mainview iframe').remove();
     $('.mainview svg').show();
     $('.mainview img').show();
-    var id = $(this).attr('data-id');
-    $('.yt-thumb').attr('data-id',id);
-    var url = 'https://i.ytimg.com/vi/'+id +'/maxresdefault.jpg';
-    var preNum = $('.mainview img').attr('data-num');
-    if (url) {
-      $('.mainview img').attr('src', url);
-      $(this).css({'display': 'none'});
+    var presrc = $('.mainview img').attr('src');
+    var preid = $('.mainview img').attr('data-id');
 
-      $('.moviebox .small-thumb').each(function() {
-        if (preNum == $(this).attr('data-num')) {
-          $(this).css({'display': 'block'});
-        }
-      });
-      $('.mainview img').attr('data-num', $(this).attr('data-num'));
-    }
+    var src =  $(this).find('img').attr('src');
+    var id =  $(this).attr('id');
+
+    $('.mainview img').attr('src', src);
+    $('.mainview img').attr('data-id',id);
+    $(this).find('img').attr(presrc);
+    $(this).attr(preid);
+
   });
 
   $(".mainview").click(function (e) {

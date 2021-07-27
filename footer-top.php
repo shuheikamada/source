@@ -36,17 +36,21 @@
 					</div>
 				</div>
 
-				<div class="footer_copy" style="background:url(<?php bloginfo('template_url'); ?>/images/common/footer.png) center center / cover no-repeat;">
+				<div class="footer_copy" style="background:url(<?php bloginfo('template_url'); ?>/images/common/footer.jpg) center center / cover no-repeat;">
 					<ul class="footer_infoList">
 
 						<li class="footer_infoItem"><a href="<?php the_sub_field('リンク'); ?>"<?php if(get_sub_field('別ウインドウ') == true){?> target="_blank"<?php } ?>><?php the_sub_field('項目'); ?></a></li>
 					</ul>
-					<ul class="sns_list">
-						<li class="sns_item"><a href="<?php the_field('facebook_url', 13684); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
-						<li class="sns_item"><a href="<?php the_field('twitter_url', 13684); ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
-						<li class="sns_item"><a href="<?php the_field('youtube_url', 13684); ?>" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
-						<li class="sns_item"><a href="<?php the_field('instagram_url', 13684); ?>" target="_blank"><i class="fa fa-instagram"></i></a></li>
-					</ul>
+
+					<div class="sp-none">
+						<ul class="sns_list">
+							<li class="sns_item"><a href="<?php the_field('facebook_url', 13684); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+							<li class="sns_item"><a href="<?php the_field('twitter_url', 13684); ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+							<li class="sns_item"><a href="<?php the_field('youtube_url', 13684); ?>" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+							<li class="sns_item"><a href="<?php the_field('instagram_url', 13684); ?>" target="_blank"><i class="fa fa-instagram"></i></a></li>
+						</ul>
+					</div>
+
 					<ul class="footer_list_bottom flex">
 						<div class="footer_list">
 							<div class="footer_item footer_item-title"><a href="/research/">青山学院大学について</a></div>
@@ -97,19 +101,13 @@
 	<script src="<?php bloginfo('template_url'); ?>/js/jquery-3.2.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-	<script src="<?php bloginfo('template_url'); ?>/js/top-combine.min.js"></script>
-
-	<!-- 追加JS -->
+	<script src="<?php bloginfo('template_url'); ?>/js/setnav.min.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/js/top-combine.min.js" async></script>
 	<script src="<?php bloginfo('template_url'); ?>/js/jquery.waslidemenu.js" defer></script>
 	<script src="<?php bloginfo('template_url'); ?>/js/scroll-animation.min.js" defer></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" defer></script>
-
-
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
-
-
 <script>
 
 
@@ -124,7 +122,7 @@ $(function(){
         dots: true,
         arrows: true,
         autoplaySpeed: 3000,
-        speed: 3000,
+        speed: 500,
     });
   });
 
