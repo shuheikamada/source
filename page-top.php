@@ -3,17 +3,19 @@
 Template Name: トップページ改修用
 */
 ?>
-<link rel="stylesheet" type="text/css" href="https://stg.aoyama.2xx.jp/wp-content/themes/aoyamagakuin/css-page-top/top.css">
-<?php get_template_part('header-top'); ?>
-<?php get_template_part('partials/important-dev'); ?>
 
+<?php get_template_part('header-top'); ?>
+<?php get_template_part('partials/important-new'); ?>
 <?php
-	$active = get_field('active','33748');
+$pageid = get_the_ID();
+?>
+<?php
+	$active = get_field('active');
 	if($active):
 ?>
 		<section class="exam">
-		<a href="<?php the_field('admission_url','33748'); ?>" class="exam__btn">
-			<?php the_field('admission_text','33748'); ?>
+		<a href="<?php the_field('admission_url');?>" class="exam__btn">
+			<?php the_field('admission_text'); ?>
 		</a>
 		</section>
 <?php
@@ -22,7 +24,9 @@ Template Name: トップページ改修用
 		<!-- aoyama people -->
 		<section>
 			<h4 class="newsbox_title section_title-top" data-scroll="once"><?php the_field('Interview見出し_英'); ?></h4>
+<?php if(get_field('Interview見出し_日')): ?>
 			<p class="section_text-top" data-scroll="once"><?php the_field('Interview見出し_日'); ?></p>
+<?php endif;?>
 			<div class="section_inner section_inner-wide">
 				<div class="peoplebox">
 					<div class="peoplebox_body">
@@ -31,9 +35,21 @@ Template Name: トップページ改修用
 					<!--青山ピープル01 Start-->
 					<div class="peoplebox_item peoplebox_item-green peoplebox_item-upper" data-scroll="once" >
 						<a href="<?php the_field('people01_リンク先'); ?>"<?php if(get_field('people01_別ウインドウ') == true){?> target="_blank"<?php } ?>>
+							<div class="peoplebox_image pc-none">
+								<img
+								data-original="<?php the_field('people01_画像'); ?>"
+								alt="people1"
+								class="lazy"
+								loading="lazy">
+							</div>
+							<div class="peoplebox_image sp-none">
+								<img
+								data-original="<?php the_field('people01_sp画像'); ?>"
+								alt="people1"
+								class="lazy"
+								loading="lazy">
+							</div>
 
-							<div class="peoplebox_image sp-none" style="background:url(<?php the_field('people01_画像'); ?>) center center / cover no-repeat;"></div>
-							<div class="peoplebox_image pc-none" style="background:url(<?php the_field('people01_sp画像'); ?>) center center / cover no-repeat;"></div>
 							<div class="peopleinfo01">
 								<p class="topic <?php the_field('people01_左帯サブタイトル（上）の背景色'); ?>"><?php the_field('people01_左帯のサブタイトル（上）'); ?></p>
 								<p class="title01 <?php the_field('people01_左帯タイトルの背景色'); ?>"><?php the_field('people01_左帯のタイトル'); ?></p>
@@ -57,8 +73,20 @@ Template Name: トップページ改修用
 							<a href="<?php the_field('people02_リンク先'); ?>"<?php if(get_field('people02_別ウインドウ') == true){?> target="_blank"<?php } ?>>
 								<div class="rectangle"></div>
 								<span class="border"></span>
-								<div class="peoplebox_image sp-none" style="background:url(<?php the_field('people02_画像'); ?>) center center / cover no-repeat;"></div>
-								<div class="peoplebox_image pc-none" style="background:url(<?php the_field('people02_sp画像'); ?>) center center / cover no-repeat;"></div>
+								<div class="peoplebox_image sp-none">
+									<img
+									data-original="<?php the_field('people02_画像'); ?>"
+									alt="people2"
+									class="lazy"
+									loading="lazy">
+								</div>
+								<div class="peoplebox_image pc-none">
+									<img
+									data-original="<?php the_field('people02_sp画像'); ?>"
+									alt="people2"
+									class="lazy"
+									loading="lazy">
+								</div>
 								<div class="peopleinfo01">
 									<p class="topic <?php the_field('people02_左帯サブタイトル（上）の背景色'); ?>"><?php the_field('people02_左帯のサブタイトル（上）'); ?></p>
 									<p class="title01 <?php the_field('people02_左帯タイトルの背景色'); ?>"><?php the_field('people02_左帯のタイトル'); ?></p>
@@ -81,8 +109,20 @@ Template Name: トップページ改修用
 							<a href="<?php the_field('people03_リンク先'); ?>"<?php if(get_field('people03_別ウインドウ') == true){?> target="_blank"<?php } ?>>
 								<div class="rectangle"></div>
 								<span class="border"></span>
-								<div class="peoplebox_image sp-none" style="background:url(<?php the_field('people03_画像'); ?>) center center / cover no-repeat;"></div>
-								<div class="peoplebox_image pc-none" style="background:url(<?php the_field('people03_sp画像'); ?>) center center / cover no-repeat;"></div>
+								<div class="peoplebox_image sp-none">
+									<img
+									data-original="<?php the_field('people03_画像'); ?>"
+									alt="people3"
+									class="lazy"
+									loading="lazy">
+								</div>
+								<div class="peoplebox_image pc-none">
+									<img
+									data-original="<?php the_field('people03_sp画像'); ?>"
+									alt="people3"
+									class="lazy"
+									loading="lazy">
+								</div>
 								<div class="peopleinfo01">
 									<p class="topic <?php the_field('people03_左帯サブタイトル（上）の背景色'); ?>"><?php the_field('people03_左帯サブタイトル（上）'); ?></p>
 									<p class="title01 <?php the_field('people03_左帯タイトルの背景色'); ?>"><?php the_field('people03_左帯のタイトル'); ?></p>
@@ -107,8 +147,20 @@ Template Name: トップページ改修用
 							<a href="<?php the_field('people04_リンク先'); ?>"<?php if(get_field('people04_別ウインドウ') == true){?> target="_blank"<?php } ?>>
 								<div class="rectangle"></div>
 								<span class="border"></span>
-								<div class="peoplebox_image sp-none" style="background:url(<?php the_field('people04_画像'); ?>) center center / cover no-repeat;"></div>
-								<div class="peoplebox_image pc-none" style="background:url(<?php the_field('people04_sp画像'); ?>) center center / cover no-repeat;"></div>
+								<div class="peoplebox_image sp-none">
+									<img
+									data-original="<?php the_field('people04_画像'); ?>"
+									alt="people4"
+									class="lazy"
+									loading="lazy">
+								</div>
+								<div class="peoplebox_image pc-none">
+									<img
+									data-original="<?php the_field('people04_sp画像'); ?>"
+									alt="people4"
+									class="lazy"
+									loading="lazy">
+								</div>
 								<div class="peopleinfo01">
 									<p class="topic <?php the_field('people04_左帯サブタイトル（上）の背景色'); ?>"><?php the_field('people04_左帯のサブタイトル（上）'); ?></p>
 									<p class="title01 <?php the_field('people04_左帯タイトルの背景色'); ?>"><?php the_field('people04_左帯のタイトル'); ?></p>
@@ -132,8 +184,20 @@ Template Name: トップページ改修用
 						<a href="<?php the_field('people05_リンク先'); ?>"<?php if(get_field('people05_別ウインドウ') == true){?> target="_blank"<?php } ?>>
 							<div class="rectangle"></div>
 							<span class="border"></span>
-							<div class="peoplebox_image sp-none" style="background:url(<?php the_field('people05_画像'); ?>) center center / cover no-repeat;"></div>
-							<div class="peoplebox_image pc-none" style="background:url(<?php the_field('people05_sp画像'); ?>) center center / cover no-repeat;"></div>
+							<div class="peoplebox_image sp-none">
+								<img
+								data-original="<?php the_field('people05_画像'); ?>"
+								alt="people5"
+								class="lazy"
+								loading="lazy">
+							</div>
+							<div class="peoplebox_image pc-none">
+								<img
+								data-original="<?php the_field('people05_sp画像'); ?>"
+								alt="people5"
+								class="lazy"
+								loading="lazy">
+							</div>
 							<div class="peopleinfo01">
 								<p class="topic <?php the_field('people05_左帯サブタイトル（上）の背景色'); ?>"><?php the_field('people05_左帯のサブタイトル（上）'); ?></p>
 								<p class="title01 <?php the_field('people05_左帯タイトルの背景色'); ?>"><?php the_field('people05_左帯のタイトル'); ?></p>
@@ -160,13 +224,20 @@ Template Name: トップページ改修用
 			<div class="section_inner section_inner-wide">
 
 				<h4 class="newsbox_title section_title-top" data-scroll="once"><?php the_field('SpecialContents見出し_英'); ?></h4>
+<?php if(get_field('SpecialContents見出し_日')): ?>
 				<p class="section_text-top" data-scroll="once"><?php the_field('SpecialContents見出し_日'); ?></p>
+<?php endif;?>
 				<div class="specialbox">
 
 					<?php if(have_rows('SC_LOOP')): ?>
 					<?php while(have_rows('SC_LOOP')): the_row(); ?>
-						<div class="specialbox_list" style="background-image: url(<?php the_sub_field('SC_BG_PC'); ?>)">
+						<div class="specialbox_list">
 							<a href="<?php the_sub_field('SC_URL'); ?>">
+								<img
+								data-original="<?php the_sub_field('SC_BG_PC');?>"
+								alt="newsimage"
+								class="lazy"
+								loading="lazy">
 								<div class="overlay"></div>
 								<span class="specialbox_more arrowmore">MORE</span>
 								<div class="specialbox_item" data-scroll="once">
@@ -191,18 +262,88 @@ Template Name: トップページ改修用
 					<div class="section_inner section_inner-wide">
 						<div class="moviebox">
 							<div class="moviebox_bg">
+							<?php if(wp_is_mobile()): ?>
+								<img
+								data-original="<?php the_field('背景動画ポスターフレーム'); ?>"
+								alt="movie"
+								class="lazy"
+								loading="lazy"
+								>
+							<?php else:?>
 								<video src="<?php the_field('背景動画'); ?>" preload="auto" muted autoplay loop poster="<?php the_field('背景動画ポスターフレーム'); ?>"></video>
+							<?php endif;?>
 							</div>
 							<h4 class="moviebox_title section_title-top" data-scroll="once"><?php the_field('動画見出し_英'); ?></h4>
+<?php if(get_field('動画見出し_日')): ?>
 							<p class="section_text-top wh" data-scroll="once"><?php the_field('動画見出し_日'); ?></p>
+<?php endif; ?>
 							<div class="moviebox_list">
 								<div class="mainview" data-scroll="once">
-									<iframe width="750" height="315" src="https://www.youtube.com/embed/<?php the_field('動画ID_01'); ?>?rel=0" frameborder="0" allow="encrypted-media" allowfullscreen data-num="1"></iframe>
+									<?php
+										$ytbg = get_field('動画サムネイル_01');
+
+										if($ytbg == ""){
+											$ytbg = "https://i.ytimg.com/vi/".get_field('動画ID_01')."/mqdefault.jpg";
+										}
+									?>
+									<img
+									data-original="<?=$ytbg;?>"
+									alt="news"
+									class="lazy yt-thumb"
+									loading="lazy"
+									data-id="<?php the_field('動画ID_01'); ?>"
+									>
+									<svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%"><path class="ytp-large-play-button-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#212121"></path><path d="M 45,24 27,14 27,34" fill="#fff"></path></svg>
 								</div>
+
 								<div class="subview_wrapeer" data-scroll="once">
-									<div class="subview first" data-url="https://www.youtube.com/embed/<?php the_field('動画ID_01'); ?>?rel=0&autoplay=1" data-num="1" style="background:url(<?php the_field('動画ID_背景01'); ?>) center center / cover no-repeat;"></div>
-									<div class="subview" data-url="https://www.youtube.com/embed/<?php the_field('動画ID_02'); ?>?rel=0&autoplay=1" data-num="2" style="background:url(<?php the_field('動画ID_背景02'); ?>) center center / cover no-repeat;"></div>
-									<div class="subview" data-url="https://www.youtube.com/embed/<?php the_field('動画ID_03'); ?>?rel=0&autoplay=1" data-num="3" style="background:url(<?php the_field('動画ID_背景03'); ?>) center center / cover no-repeat;"></div>
+									<?php
+										$ytbg = get_field('動画サムネイル_01');
+
+										if($ytbg == ""){
+											$ytbg = "https://i.ytimg.com/vi/".get_field('動画ID_01')."/mqdefault.jpg";
+										}
+									?>
+									<div class="subview small-thumb first" data-id="<?php the_field('動画ID_01'); ?>">
+										<img
+										data-original="<?=$ytbg;?>"
+										alt="news"
+										class="lazy yt-thumb"
+										loading="lazy"
+										data-num="1" data-id="<?php the_field('動画ID_01'); ?>"
+										>
+									</div>
+									<?php
+										$ytbg = get_field('動画サムネイル_02');
+										if($ytbg == ""){
+											$ytbg = "https://i.ytimg.com/vi/".get_field('動画ID_02')."/mqdefault.jpg";
+										}
+									?>
+									<div class="subview small-thumb" data-id="<?php the_field('動画ID_02'); ?>">
+										<img
+										data-original="<?=$ytbg;?>"
+										alt="news"
+										class="lazy yt-thumb"
+										loading="lazy"
+										data-num="2" data-id="<?php the_field('動画ID_02'); ?>"
+										>
+									</div>
+									<?php
+										$ytbg = get_field('動画サムネイル_03');
+										if($ytbg == ""){
+											$ytbg = "https://i.ytimg.com/vi/".get_field('動画ID_03')."/mqdefault.jpg";
+										}
+									?>
+									<div class="subview small-thumb" data-id="<?php the_field('動画ID_03'); ?>">
+										<img
+										data-original="<?=$ytbg;?>"
+										alt="news"
+										class="lazy yt-thumb"
+										loading="lazy"
+										data-num="3" data-id="<?php the_field('動画ID_03'); ?>"
+										>
+									</div>
+
 									<div class="subview" style="background:url(<?php the_field('動画ID_背景04'); ?>) center center / cover no-repeat;"><a href="<?php the_field('動画リンク先'); ?>"><span>WATCH  MORE</span></a></div>
 								</div>
 								<a href="<?php the_field('動画リンク先'); ?>" class="arrowmore pc-none">WATCH MORE</a>
@@ -217,7 +358,9 @@ Template Name: トップページ改修用
 					<div class="section_inner section_inner-wide">
 						<div class="newsbox">
 							<h4 class="newsbox_title section_title-top" data-scroll="once"><?php the_field('NEWS見出し_英'); ?></h4>
+<?php if(get_field('NEWS見出し_日')): ?>
 							<p class="newsbox_text section_text-top" data-scroll="once"><?php the_field('NEWS見出し_日'); ?></p>
+<?php endif;?>
 							<div class="newsbox_list">
 								<?php $ii = 0; ?>
 								<?php
@@ -226,6 +369,7 @@ Template Name: トップページ改修用
 								'category_name' => 'news',
 								'meta_key' => 'TOPページへの表示',
 								'meta_value' => '1',
+								'post_status' => 'publish',
 								'posts_per_page' => 6
 								);
 								$q = new WP_Query( $args );
@@ -233,14 +377,27 @@ Template Name: トップページ改修用
 								?>
 								<?php if ( has_post_thumbnail() ) {
 									$image_id = get_post_thumbnail_id ();
-									$image_url = wp_get_attachment_image_src ($image_id, true);
+									$image_url = wp_get_attachment_image_src ($image_id, 'large');
 									$img = $image_url[0];
 								} else {
 								$img = get_bloginfo( 'template_directory' ) . '/images/campuslife/subjectbox_bg01.jpg';
 								} ?>
 								<div class="newsbox_item <?php if($ii == 0) {?>newsbox_item-wide<?php } ?>" data-scroll="once">
 									<a href="<?php the_permalink(); ?>">
-										<div class="newsbox_image" style="background:url(<?php if($ii == 0) { the_field('1stimage'); }else{ echo $img;}?>) center center / cover no-repeat;"></div>
+										<div class="newsbox_image">
+											<?php
+												if($ii ==0){
+ 													$newsimage = get_field('1stimage');
+												}else{
+													$newsimage = $img;
+												}
+ 											?>
+											<img
+											data-original="<?=$newsimage; ?>"
+											alt="news"
+											class="lazy"
+											loading="lazy">
+										</div>
 										<div class="overlay"></div>
 										<div class="wrapper">
 											<p class="date"><?php the_time('Y.n.j'); ?></p>
@@ -277,7 +434,9 @@ $abbntitle = mb_strimwidth($ntitle, 0, 190, "...", 'UTF-8');
 			<div class="section_inner section_inner-wide">
 				<div class="eventbox eventbox-top">
 					<h4 class="section_title-top wh" data-scroll="once"><?php the_field('EVENT見出し_英'); ?></h4>
+<?php if(get_field('EVENT見出し_日')): ?>
 					<p class="section_text-top wh" data-scroll="once"><?php the_field('EVENT見出し_日'); ?></p>
+<?php endif;?>
 					<ul class="eventbox_list">
 
 						<?php
@@ -291,6 +450,7 @@ $abbntitle = mb_strimwidth($ntitle, 0, 190, "...", 'UTF-8');
 							'key'     => 'TOPページへの表示',
 							'value'   => '1',
 						],
+						'post_status' => 'publish',
 						'posts_per_page' => 7
 						);
 						$q = new WP_Query( $args );
@@ -298,14 +458,20 @@ $abbntitle = mb_strimwidth($ntitle, 0, 190, "...", 'UTF-8');
 						?>
 						<?php if ( has_post_thumbnail() ) {
 							$image_id = get_post_thumbnail_id ();
-							$image_url = wp_get_attachment_image_src ($image_id, true);
+							$image_url = wp_get_attachment_image_src ($image_id, 'large');
 							$img = $image_url[0];
 						} else {
 						$img = get_bloginfo( 'template_directory' ) . '/images/campuslife/subjectbox_bg01.jpg';
 						} ?>
 
 						<li class="eventbox_item eventbox_item-event" data-scroll="once">
-							<a href="<?php the_permalink(); ?>" class="eventbox_link" style="background:url(<?php echo $img;?>) center center / cover no-repeat;">
+							<img
+							data-original="<?=$img; ?>"
+							alt="event"
+							class="lazy"
+							loading="lazy">
+							<a href="<?php the_permalink(); ?>" class="eventbox_link">
+
 								<div class="overlay"></div>
 								<div class="eventbox_wrapper">
 									<p class="eventbox_text">
@@ -350,14 +516,19 @@ $abbntitle = mb_strimwidth($ntitle, 0, 190, "...", 'UTF-8');
 
 		<!-- columnbox -->
 		<section class="tilemenu">
-			<div class="columnbox_top" style="background:url(https://stg.aoyama.2xx.jp/wp-content/themes/aoyamagakuin/images/columnbox-top.png) center center / cover no-repeat;"></div>
+			<div class="columnbox_top"></div>
 			<div class="section_inner section_inner-wide">
 				<div class="tilemenu">
 
 					<div class="tilemenu_list">
 						<?php if(have_rows('middle-menu-loop')): ?>
 						<?php while(have_rows('middle-menu-loop')): the_row(); ?>
-							<div class="tilemenu_box" style="background-image: url(<?php the_sub_field('background-img'); ?>)">
+							<div class="tilemenu_box">
+								<img
+								data-original="<?=get_sub_field('background-img'); ?>"
+								alt="tile"
+								class="lazy tilemenu_img"
+								loading="lazy">
 								<a href="<?php the_sub_field('url'); ?>">
 									<div class="overlay"></div>
 									<div class="tilemenu_item" data-scroll="once">
@@ -374,23 +545,47 @@ $abbntitle = mb_strimwidth($ntitle, 0, 190, "...", 'UTF-8');
 
 				</div>
 			</div>
-<div class="columnbox_bottom" style="background:url(https://stg.aoyama.2xx.jp/wp-content/themes/aoyamagakuin/images/columnbox-bottom.png) center center / cover no-repeat;"></div>
+<div class="columnbox_bottom"></div>
 		</section>
 
 		<section class="media pc-none">
 			<div class="section_inner section_inner-wide">
-				<h4 class="section_title-top" data-scroll="once">SOCIAL MEDIA</h4>
 				<div class="flexbox">
-					<a href="https://www.facebook.com/AoyamaGakuinU/" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/facebook.png"></a>
-					<a href="https://twitter.com/AoyamaGakuinU" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/twitter.png"></a>
-					<a href="https://www.youtube.com/channel/UCb0FZ7wO98F8GDIhN6kqHvg" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/youtube.png"></a>
-					<a href="https://www.instagram.com/aoyamagakuinuniversity/" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/instagram.png"></a>
+					<a href="<?php the_field('facebook_url', 13684); ?>" target="_blank">
+						<img
+						data-original="<?php bloginfo('template_url'); ?>/images/facebook.svg"
+						alt="facebook"
+						class="lazy"
+						loading="lazy" style="width:30.1847px; height:56.7858px;">
+					</a>
+					<a href="<?php the_field('twitter_url', 13684); ?>" target="_blank">
+						<img
+						alt="twitter"
+						data-original="<?php bloginfo('template_url'); ?>/images/twitter.svg"
+						class="lazy"
+						loading="lazy" style="width:46.1213px; height:37.4818px;">
+					</a>
+					<a href="<?php the_field('youtube_url', 13684); ?>" target="_blank">
+						<img
+						data-original="<?php bloginfo('template_url'); ?>/images/youtube.svg"
+						alt="youtube"
+						class="lazy"
+						loading="lazy" style="width:46.0413px; height:32.3303px;">
+					</a>
+					<a href="<?php the_field('instagram_url', 13684); ?>" target="_blank">
+						<img
+						data-original="<?php bloginfo('template_url'); ?>/images/instagram@2x.png"
+						alt="instagram"
+						class="lazy"
+						loading="lazy" style="width: 56px;height: 56px;">
+
+					</a>
 				</div>
 			</div>
 		</section>
 
 		<!-- / columnbox -->
 
-		<?php get_template_part('partials/instagram-dev'); ?>
+		<?php get_template_part('partials/instagram-new'); ?>
 
 <?php get_footer('top'); ?>
